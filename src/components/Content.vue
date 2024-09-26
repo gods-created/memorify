@@ -255,6 +255,37 @@
             </div>
       </div>
     </div>
+    
+    <div class="container" id="contacts">
+        <div class="row gap-3 border rounded p-3">
+            <div class="col-12 d-flex align-center justify-center">
+              <div class="row g-0 border-start border-end overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static text-center">
+                  <p class="mb-2">
+                    <span class="fw-bold">Телефон: </span><br />
+                    <span>+380508871099</span>
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Пошта: </span><br />
+                    <span>memorifyua@gmail.com</span>
+                  </p>
+                  <p class="mb-2">
+                    <span class="fw-bold">Адреса: </span><br />
+                    <span>м. Дніпро</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 w-100">
+              <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+                <div class="col d-flex flex-column position-static">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d338660.7581797777!2d34.37654443603503!3d48.46061289627564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe303fd08468f%3A0xa1cf3d5f2c11aba!2z0JTQvdC10L_RgCwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1727367577173!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
