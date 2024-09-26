@@ -214,7 +214,7 @@
               <div class="card shadow-sm">
                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="48%" y="50%" fill="#eceeef" dy=".3em" dx="-.7em">Крок 2</text></svg>
                 <div class="card-body">
-                  <p class="card-text">Після согласування деталей з менеджером, розробники протягом однієЇ добі створюють сторінку з тими даними, що ви відправили.</p>
+                  <p class="card-text">Після погодження деталей з менеджером, розробники протягом однієї добі створюють сторінку з тими даними, що ви відправили.</p>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
               <div class="card shadow-sm">
                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="48%" y="50%" fill="#eceeef" dy=".3em" dx="-.7em">Крок 4</text></svg>
                 <div class="card-body">
-                  <p class="card-text">Ви отримуєте дзвінок від менеджера, який дає вам URL сторінки для перегляду. На цьому етапі ви можете внести корегування.</p>
+                  <p class="card-text">Ви отримуєте дзвінок від менеджера, який дає вам URL сторінки для перегляду. На цьому етапі ви можете внести коригування.</p>
                 </div>
               </div>
             </div>

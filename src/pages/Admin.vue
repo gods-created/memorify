@@ -1,68 +1,67 @@
 <template>
-    <div class="container admin-panel h-100">
-        <v-alert v-show="alert.show" :color="alert.color" :text="alert.text" style="max-height:56px;"></v-alert>
-        <v-header>
-            <div class="px-4 py-5 text-center bg-light">
-                <img class="d-block mx-auto mb-4 img-fluid" :src="logo" alt="logo" width="72" height="57">
-                <h1 class="display-5 fw-bold text-body-emphasis">Адмін панель Memorify</h1>
-                <div class="col-lg-6 mx-auto text-dark">
-                  <p class="lead mb-4">Використовуй цю панель для створення персональних сторінок по замовленню.</p>
+    <v-alert v-show="alert.show" :color="alert.color" :text="alert.text" style="max-height:56px;"></v-alert>
+    
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <img class="d-block mx-auto mb-4 img-fluid" :src="logo" alt="logo" style="width:100px;">
+            <h1 class="display-5 fw-bold text-light">Адмін панель Memorify</h1>
+            <div class="col-lg-6 mx-auto text-light">
+              <p class="lead mb-4">Використовуй цю панель для створення персональних сторінок по замовленню.</p>
+              
+              <div class="form">
+                 <v-text-field
+                    class="mb-2"
+                    type="text"
+                    v-model="form.user_id.value"
+                    :rules="form.user_id.rules"
+                    label="ID замовника"
+                  ></v-text-field>
                   
-                  <div class="form">
-                     <v-text-field
-                        class="mb-2"
-                        type="text"
-                        v-model="form.user_id.value"
-                        :rules="form.user_id.rules"
-                        label="ID замовника"
-                      ></v-text-field>
-                      
-                      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <v-btn :loading="form.button.state" :disabled="form.button.state" @click.prevent="create_page">
-                            Створити
-                        </v-btn>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        </v-header>
-        
-        <div class="flex-grow-1 table-block">
-            <div class="text-center">
-                <v-table>
-                    <thead>
-                      <tr>
-                        <th class="text-center">Айді замовника</th>
-                        <th class="text-center">Наявність робочої сторінки</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="customer in paginatedCustomers" :key="customer.user_id">
-                        <td @click.prevent="copy_to_form(customer.user_id, customer.page)" style="cursor:pointer;">
-                            <span>
-                                <v-tooltip
-                                    activator="parent"
-                                    location="start"
-                                >Скопіювати у форму</v-tooltip>
-                                {{ customer.user_id }}
-                            </span>
-                        </td>
-                        <td>{{ customer.page ? customer.page : 'FALSE' }}</td>
-                      </tr>
-                    </tbody>
-                </v-table>
+                 <v-btn :loading="form.button.state" :disabled="form.button.state" @click.prevent="create_page">
+                    Створити
+                 </v-btn>
+              </div>
             </div>
         </div>
+      </section>
+
+      <div class="album bg-body-tertiary">
+        <div>
+            <v-table class="text-center">
+                <thead>
+                  <tr>
+                    <th class="text-center">Айді замовника</th>
+                    <th class="text-center">Наявність робочої сторінки</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="customer in paginatedCustomers" :key="customer.user_id">
+                    <td @click.prevent="copy_to_form(customer.user_id, customer.page)" style="cursor:pointer;">
+                        <span>
+                            <v-tooltip
+                                activator="parent"
+                                location="start"
+                            >Скопіювати у форму</v-tooltip>
+                            {{ customer.user_id }}
+                        </span>
+                    </td>
+                    <td>{{ customer.page ? customer.page : 'FALSE' }}</td>
+                  </tr>
+                </tbody>
+            </v-table>
         
-        <footer class="footer bg-dark">
             <v-pagination
+              class="bg-dark"
               v-model="page"
               :length="Math.ceil(customers.length / 3)"
               next-icon="mdi-menu-right"
               prev-icon="mdi-menu-left"
             ></v-pagination>
-        </footer>
-    </div>
+        </div>
+      </div>
+
+    </main>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="modal d-block" tabindex="-1">
+    <div id="modal" class="modal d-block" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
@@ -218,8 +218,8 @@
             
             button_state.disabled = false;
             button_state.loading = false;
-            
-            document.querySelector('.modal').scrollTo(0, 0);
+
+            document.getElementById('modal').scrollTo(0, 0)
             return;
         },
     }
