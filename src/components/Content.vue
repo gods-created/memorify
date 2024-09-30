@@ -263,15 +263,20 @@
                 <div class="col p-4 d-flex flex-column position-static text-center">
                   <p class="mb-2">
                     <span class="fw-bold">Телефон: </span><br />
-                    <span>+380508871099</span>
+                    <span class="text-info">+380508871099</span>
                   </p>
                   <p class="mb-2">
                     <span class="fw-bold">Пошта: </span><br />
-                    <span>memorifyua@gmail.com</span>
+                    <span class="text-info">memorifyua@gmail.com</span>
                   </p>
                   <p class="mb-2">
                     <span class="fw-bold">Адреса: </span><br />
-                    <span>м. Дніпро</span>
+                    <span class="text-info">м. Дніпро</span>
+                  </p>
+                  
+                  <p class="mb-2">
+                    <span class="fw-bold">Час роботи: </span><br />
+                    <span class="text-info">24/7 з понеділка по неділю</span>
                   </p>
                 </div>
               </div>
